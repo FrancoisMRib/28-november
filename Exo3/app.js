@@ -14,10 +14,18 @@ data() {
 },
 //! Dans cet Object methods, on va écrire nos fonctions
 methods: {
-    ajouterTask() {
-    this.tasks.push(this.valeurDeInput);
-    this.valeurDeInput = '';
-    },
+    //ajouterTask() {
+    //this.tasks.push(this.valeurDeInput);
+    //this.valeurDeInput = '';
+    //},
+    afficherLivreRandom() {
+        const random = Math.random() ; 
+        if (random > 0.5) {
+            return "Le père Noël contre les martiens" ;
+        } else {
+            return "Le gendarme dans l'espace" ;
+        }
+    }
 },
 //! L'application est montée sur la balise HTML qui possède l'id app
 }).mount('#app');
