@@ -4,7 +4,6 @@ Vue.createApp({
     //! Toutes les data seront contenues dans this
     data() {
         return {
-        tasks: [],
         valeurDeInput: 'Mario',
         age: 45,
 
