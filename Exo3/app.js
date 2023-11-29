@@ -23,7 +23,7 @@ methods: {
         if (random > 0.5) {
             return "Le père Noël contre les martiens" ;
         } else {
-            return "Le gendarme dans l'espace" ;
+            return "Le gendarme contre les visiteurs" ;
         }
     }
 },
