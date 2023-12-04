@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<style>
+    .maClasseHello {
+        background-color: steelblue;
+        font-family: Impact;
+        color: beige;
+    }
+    .maClasseWorld {
+        background-color: rgb(200, 0, 255);
+        color: chartreuse;
+    }
+    .maClasseHidden {
+        display: none;
+    }
+    .maClasseVisible {
+        display: block;
+    }
+</style>
+<body>
+    <!--CORRECTION
+    <h1 v-if="visible" :class="{Hello: valeurDeLinput == 'Hello' ? true : false, World: valeurDeLinput == 'World' ? true : false} " class="form-label mt-1">
+            Hello World (class dynamique)
+        </h1>
+        OU ALORS
+    <h1 class="text-center">TP:Dynamic Styling</h1>
+<div id="monApp">
+    <div class="m-3">
+    <div>
+        <input v-model="nomClasse" type="text" class="form-control" />
+        <!-- <h1 :class="{maClasseHello: nomClasse==='hello'}"  class="form-label mt-1">Hello World (class dynamique)</h1> -->
+        <!-- version en passant par une fonction computed 
+        -->
+        <h1 :class="classDynamique" class="form-label mt-1">
+            Hello World (class dynamique)
+            </h1>
+        </div>
+        <div class="mb-3">
+            <input v-model="laCouleur" type="text" class="form-control" />
+            <h1 :style="{backgroundColor: laCouleur}" class="form-label mt-1">
+            Hello World (couleur dynamique)
+            </h1>
+        </div>
+        <div class="mb-3 form-check"></div>
+        <button @click="affichage" class="btn btn-primary">
+            Afficher 1er Titre
+        </button>
+        </div>
+    </div>-->
+    <h1><center>TP : Dynamic Styling</center></h1>
+    <div id="monApp">
+        <div class="m-3">
+        <div>
+            <input type="text" class="form-control" @keyup='premierInput()' v-model="input1"/>
+    
+            <h2 class="form-label mt-1" :class="{maClasseHello: hello, maClasseWorld: world, maClasseHidden: button, maClasseVisible: false}" >
+            Hello World (class dynamique)
+            </h2>
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" v-model="inputColor"/>
+            <h2 class="form-label mt-1" :style="{backgroundColor : inputColor}">
+            Hello World (couleur dynamique)
+            </h2>
+        </div>
+        <div class="mb-3 form-check"></div>
+        <button class="btn btn-primary" @click="btnHide">
+            Afficher 1er Titre
+        </button>
+        </div>
+    </div>
+    <!--
+    <h1>TP : Dynamic Styling</h1>
+    <input type="text">
+    <br>
+    <h2>Hello World (class dynamique)</h2>
+    <br>
+    <input type="text">
+    <br>
+    <h2>Hello World (couleur dynamique)</h2>
+    <br>
+    <button v-bind:style="styleObject" >Afficher le 1er titre</button>
+
+    -->
+    <!-- script pour contacter VUE -->
+<script src="https://unpkg.com/vue@next"></script>
+<script src="app11.js"></script>
+<!-- Bootstrap JavaScript Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+
+</body>
+</html>
