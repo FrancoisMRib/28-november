@@ -20,17 +20,21 @@
     <div id="monApp">
         <div class="m-3">
         <h2>La liste des courses 🛒</h2>
-        <input v-model="nomFilm" type="text" class="form-control" />
-        <button @click="ajouterFilm()" class="btn btn-success mt-3">
+        <input v-model="nomProduit" type="text" class="form-control" />
+        <button @click="ajouterProduit()" class="btn btn-success mt-3">
             Ajouter à votre Liste de Courses
         </button>
         <hr />
-        <h2 v-if="mesFilms.length === 0">La liste est vide</h2>
-        <ul v-else>
-            <!-- avec la directive v-for on répète un template en fonction de data (généralement tableaux ou listes) -->
-            <!-- <li v-for="unFilm in mesFilms">{{unFilm}}</li> -->
-            <!-- Bonus v-for : on met le 2nd param que l'on veut ca sera un index (numéro) -->
-            <li v-for="(unFilm,unIndex) in mesFilms">{{unIndex}} - {{unFilm}}</li>
+        <h2 v-if="mesFilms.length === 0">Aucune course à faire, on économise</h2>
+        <!-- En-dessous, correction-->
+        <ul v-if="visible">
+            <li
+            v-for="(unProduit, unIndex) in listeDesCourses"
+            v-bond:key="unProduit"
+            v-on:click="supprimerProduit(unIndex)"
+            >
+            {{unIndex}} - {{unProduit}}
+        </li>
         </ul>
         <button @click="masquerListe()" class="btn btn-primary mt-3" id="masquaff">
             Masquer la Liste

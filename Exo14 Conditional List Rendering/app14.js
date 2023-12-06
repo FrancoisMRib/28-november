@@ -1,52 +1,30 @@
 const app = Vue.createApp({
     data() {
         return {
-        nomFilm: '',
-        mesFilms: [],
+        nomProduit: '',
+        listeDesCourses: [],
         nomClasse: '',
         laCouleur: '',
         visible: true,
         };
     },
-    computed: {
-        //!Version optimisé en passant par une fonction
-        //!Computed pour pas avoir d'interférences avec la ƒ° toggle
-        classDynamique() {
-        return{
-          maClasseHello: this.nomClasse ==='hello',
-          maClasseWorld: this.nomClasse ==='world',
-          maClasseHidden: !this.visible,
-          maClasseVisible: this.visible
+    // Cette ligne de computed est hyper importante sinon la fonction masquerListe marche pas
+    computed : {
+        messageButton() {
+            return this.visible ? 'Masquer liste' : 'Afficher liste'
         }
-
-        //? première version
-        // if (this.nomClasse === 'hello') {
-        //     return 'maClasseHello';
-        // }
-        // if (this.nomClasse === 'world') {
-        //     return 'maClasseWorld';
-        // }
-        // if (this.visible) {
-        //     return 'maClasseVisible';
-        // }
-        // if (!this.visible) {
-        //     return 'maClasseHidden';
-        // }
-        },
-        
     },
     methods: {
-        ajouterFilm() {
-        this.mesFilms.push(this.nomFilm);
+        ajouterProduit() {
+        this.listeDesCourses.push(this.nomProduit);
         // this.nomFilm = '';
         },
         masquerListe() {
             console.log("test");
-            if (this.visible = !this.visible) {
-                document.getElementById("masquaff") {
-                    
-                }
-            };
+            this.visible = !this.visible;
+        },
+        supprimerProduit(unIndex) {
+            this.listeDesCourses.splice(unIndex, 1);
         }
     },
     });
