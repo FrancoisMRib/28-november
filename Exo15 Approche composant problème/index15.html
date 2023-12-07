@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <div id="monApp" class="container">
+        <nav class="navbar bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+            <img src="./docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            Les Copains D'Abord
+            </a>
+        </div>
+        </nav>
+        <section id="app">
+            <ami-comp></ami-comp>
+            <ami-comp></ami-comp>
+            <!-- <div v-for="(unAmi, index) in lesAmis" :key="unAmi.id" class="card border-dark mb-3">
+              <div class="card-header">{{unAmi.name}}</div>
+              <div class="card-body text-dark">
+                <button @click="toggleDetails()" type="button" class="btn btn-dark mb-1">{{detailsVisibles ? 'Masquer':'Voir'}}</button>
+                <ul v-if="detailsVisibles" class="list-group list-group-flush">
+                  <li class="list-group-item">{{unAmi.email}}</li>
+                  <li class="list-group-item">{{unAmi.phone}}</li>                          
+                </ul>
+              </div>
+          </div> -->
+        </section>
+        <!--<section>
+        <div class="card border-dark mb-3" v-for="unAmi in lesAmis" v-bind:key="unAmi.id">
+            <div class="card-header">{{unAmi.nom}}</div>
+            <div class="card-body text-dark">
+            <button type="button" class="btn btn-dark mb-1" @click="toggleDetails()">{{detailsVisibles ? 'Afficher': 'Masquer'}}</button>
+            <!--Autre version avec le message du bouton qui change pas (la mienne)
+            <button type="button" class="btn btn-dark mb-1" @click="toggleDetails()">MSG Button</button>
+            
+            <ul  class="list-group list-group-flush" v-if="detailsVisibles === true">
+                <li class="list-group-item">{{unAmi.mail}}</li>
+                <li class="list-group-item">{{unAmi.tel}}</li>                          
+            </ul>
+            </div>
+        </div>
+        </section> -->
+    </div>
+    <!-- script pour contacter VUE -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="app15.js"></script>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+</body>
+</html>
